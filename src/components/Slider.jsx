@@ -52,8 +52,7 @@ const ImgContainer = styled.div`
 `
 
 const Image = styled.img`
-  height: 80%;
-
+  height: 100%;
 `
 
 const InfoContainer = styled.div`
@@ -90,26 +89,12 @@ const Slider = () => {
     }
   }
 
-  setInterval(() => {
-    handleClick("right");
-  }, 5000);
-
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />  
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-        {/* <Slide bg="#f0f1f5">
-          <ImgContainer>
-            <Image src="https://images.pexels.com/photos/6437821/pexels-photo-6437821.jpeg"/>
-          </ImgContainer>
-          <InfoContainer>
-            <Title>SUMMER SALE</Title>
-            <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide> */}
         {sliderItems.map((item) => (
           <Slide bg={item.bg}>
             <ImgContainer>
